@@ -1,0 +1,18 @@
+.box2 div{
+    padding-top: 3pt;
+    height: 6cm;
+    margin-top: 1cm;
+    margin-bottom: 0cm;
+    border: none;
+    background-blend-mode: fixed;
+    background-color: rgb(241, 248, 248);
+    border-radius: 10px;
+    
+}
+.terms{
+    font-style: oblique;
+    font-variant: small-caps;
+    color: rgb(12, 26, 53);
+    font-size: large;
+    font-size: 2vw;
+}
