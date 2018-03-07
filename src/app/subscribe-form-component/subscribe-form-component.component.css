@@ -1,0 +1,42 @@
+
+form {
+    border: 3px solid rgb(241, 248, 248);;
+    font-family: Arial;
+    width: 100%;
+    margin-top: 1cm;
+    border-radius: 10px;
+}
+
+.container {
+    padding: 0px;
+    background-color: rgb(241, 248, 248);
+    width: 100%;
+    border-radius: 10px;
+}
+
+input[type=text], input[type=submit] {
+    width: 100%;
+    padding: 12px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 10px;
+}
+
+input[type=checkbox] {
+    margin-top: 16px;
+}
+
+input[type=submit] {
+    background-color: rgb(212, 170, 169);
+    color: white;
+    border: none;
+    font-style: bold;
+    font-size: large;
+    border-radius: 10px;
+}
+
+input[type=submit]:hover {
+    opacity: 0.8;
+}
