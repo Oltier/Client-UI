@@ -1,18 +1,25 @@
-<form action="#">
+<form (ngSubmit)="onSubmit(subscriberForm)" #subscriberForm="ngForm" >
   <div class="container">
     <h2>Subscribe to our Newsletter</h2>
-    <p>Lorem ipsum text about why you should subscribe to our newsletter blabla. Lorem ipsum text about why you should subscribe to our newsletter blabla.</p>
+    <p>Get daily news about our works and be aware of new services.</p>
   </div>
 
   <div class="container" style="background-color:white">
-    <input type="text" placeholder="Name" name="name" required>
-    <input type="text" placeholder="Email address" name="mail" required>
+    <input type="text" placeholder="Firstname" [(ngModel)]="model.fname" name="fname"  required #fname="ngModel"/>
+    <input type="text" placeholder="Lastname" [(ngModel)]="model.lname" name="lname"  required #lname="ngModel"/>
+    <input type="email" placeholder="Email address" [(ngModel)]="model.email" name="email"  required #email="ngModel"/>
     <label>
       <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
     </label>
   </div>
 
   <div class="container">
-    <input type="submit" value="Subscribe">
+    <input type="submit" value="Subscribe" [disabled]="!subscriberForm.valid">
   </div>
+  <div [hidden]="!submitted">
+  <div class="container">
+    <div *ngIf="model">
+      {{model.fname}} ,  {{model.lname}},  {{model.email}}
+    </div>
+  </div></div>
 </form>

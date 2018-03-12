@@ -8,13 +8,17 @@ form {
 }
 
 .container {
-    padding: 0px;
+    padding: 10px;
     background-color: rgb(241, 248, 248);
     width: 100%;
     border-radius: 10px;
+    border-bottom-left-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
 }
 
-input[type=text], input[type=submit] {
+input[type=text], input[type=submit],input[type=email] {
     width: 100%;
     padding: 12px;
     margin: 8px 0;

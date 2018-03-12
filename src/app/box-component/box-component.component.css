@@ -15,4 +15,16 @@
     color: rgb(12, 26, 53);
     font-size: large;
     font-size: 2vw;
+    margin-top: 0em;
+    margin-bottom: 0em;
+    padding-bottom: 0em;
+    padding-top: 0em;
+}
+#box11{
+    border-bottom-right-radius: 0px;
+ 
+}
+#box12 {
+
+    border-bottom-left-radius: 0px;
 }
