@@ -7,7 +7,7 @@ import {_Subscriber} from './subscriber'
 import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
 @Injectable()
 export class SubscribeFormService {
-  private frmUrl = 'http://api:3000';
+  private frmUrl = 'https://api:3000/api/subscribers';
   private handleError: HandleError;
   constructor(private http: HttpClient, httpErrorHandler: HttpErrorHandler ) { 
     this.handleError = httpErrorHandler.createHandleError('HeroesService');

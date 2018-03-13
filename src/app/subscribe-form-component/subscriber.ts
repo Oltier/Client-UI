@@ -1,14 +1,14 @@
 export class _Subscriber {
-fname: string;
-lname: string;
+firstname: string;
+lastname: string;
 email: string;
   constructor(
-    fname: string,
-    lname: string,
+    firstname: string,
+    lastname: string,
     email: string)
     {
-      this.fname=fname;
-      this.lname=lname;
+      this.firstname=firstname;
+      this.lastname=lastname;
       this.email=email;
     }
   }
