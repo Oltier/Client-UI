@@ -9,7 +9,7 @@ import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
 export class SubscribeFormService {
   private frmUrl = 'https://api:3000/api/subscribers';
   private handleError: HandleError;
-  constructor(private http: HttpClient, httpErrorHandler: HttpErrorHandler ) { 
+  constructor(private http: HttpClient, httpErrorHandler: HttpErrorHandler ) {
     this.handleError = httpErrorHandler.createHandleError('HeroesService');
   }
   addSubscriber (user: _Subscriber): Observable<_Subscriber> {
