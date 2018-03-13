@@ -3,24 +3,19 @@
     <h2>Subscribe to our Newsletter</h2>
     <p>Get daily news about our works and be aware of new services.</p>
   </div>
-
   <div class="container" style="background-color:white">
+    <div [hidden]="!submitted">
+      <div *ngIf="thanksMessage" class="alert alert-success">
+        <strong>Success!</strong> {{thanksMessage}}.
+      </div>
+    </div>
     <input type="text" placeholder="Firstname" [(ngModel)]="model.firstname" name="firstname" required #firstname="ngModel" />
     <input type="text" placeholder="Lastname" [(ngModel)]="model.lastname" name="lastname" required #lastname="ngModel" />
     <input type="email" placeholder="Email address" [(ngModel)]="model.email" name="email" required #email="ngModel" />
-    <label>
-      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-    </label>
   </div>
 
   <div class="container">
     <input type="submit" value="Subscribe" [disabled]="!subscriberForm.valid">
   </div>
-  <div [hidden]="!submitted">
-    <div class="container">
-      <div *ngIf="model">
-        {{model.firstname}} , {{model.lastname}}, {{model.email}}
-      </div>
-    </div>
-  </div>
+
 </form>
