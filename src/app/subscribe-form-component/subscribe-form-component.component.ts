@@ -23,7 +23,7 @@ export class SubscribeFormComponentComponent implements OnInit {
       return;
     }
     // The server will generate the id for this new subscriber
-    this.model = new _Subscriber(form.value['firstname'], form.value['lastname'], form.value['email']);
+    this.model = new _Subscriber(form.value['firstName'], form.value['lastName'], form.value['email']);
     this.heroesService.addSubscriber(this.model)
       .subscribe();
     console.log(this.model);

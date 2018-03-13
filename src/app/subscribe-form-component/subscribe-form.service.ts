@@ -7,7 +7,7 @@ import {_Subscriber} from './subscriber'
 import { HttpErrorHandler, HandleError } from '../http-error-handler.service';
 @Injectable()
 export class SubscribeFormService {
-  private frmUrl = 'https://api:3000/api/subscribers';
+  private frmUrl = 'https://api.medicalbox.online/api/subscribers';
   private handleError: HandleError;
   constructor(private http: HttpClient, httpErrorHandler: HttpErrorHandler ) {
     this.handleError = httpErrorHandler.createHandleError('HeroesService');
@@ -15,7 +15,7 @@ export class SubscribeFormService {
   addSubscriber (user: _Subscriber): Observable<_Subscriber> {
     return this.http.post<_Subscriber>(this.frmUrl, user)
       .pipe(
-        catchError(this.handleError('addSubscirber', user))
+        catchError(this.handleError('addSubscriber', user))
       );
   }
 }

@@ -1,15 +1,13 @@
 export class _Subscriber {
-firstname: string;
-lastname: string;
-email: string;
-  constructor(
-    firstname: string,
-    lastname: string,
-    email: string)
-    {
-      this.firstname=firstname;
-      this.lastname=lastname;
-      this.email=email;
-    }
+  firstName: string;
+  lastName: string;
+  email: string;
+
+  constructor(firstName: string,
+              lastName: string,
+              email: string) {
+    this.firstName = firstName;
+    this.lastName = lastName;
+    this.email = email;
   }
-  
+}

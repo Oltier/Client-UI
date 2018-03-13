@@ -5,8 +5,8 @@
   </div>
 
   <div class="container" style="background-color:white">
-    <input type="text" placeholder="Firstname" [(ngModel)]="model.firstname" name="firstname" required #firstname="ngModel" />
-    <input type="text" placeholder="Lastname" [(ngModel)]="model.lastname" name="lastname" required #lastname="ngModel" />
+    <input type="text" placeholder="First name" [(ngModel)]="model.firstName" name="firstName" required #firstName="ngModel" />
+    <input type="text" placeholder="Last name" [(ngModel)]="model.lastName" name="lastName" required #lastName="ngModel" />
     <input type="email" placeholder="Email address" [(ngModel)]="model.email" name="email" required #email="ngModel" />
     <label>
       <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
@@ -19,7 +19,7 @@
   <div [hidden]="!submitted">
     <div class="container">
       <div *ngIf="model">
-        {{model.firstname}} , {{model.lastname}}, {{model.email}}
+        {{model.firstName}} , {{model.lastName}}, {{model.email}}
       </div>
     </div>
   </div>
