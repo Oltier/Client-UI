@@ -12,10 +12,11 @@ import { _Subscriber } from './subscriber'
 export class SubscribeFormComponentComponent implements OnInit {
   model = new _Subscriber("", "", "");
   submitted = false;
-  constructor(private heroesService: SubscribeFormService) { }
+  thanksMessage: any;
+  constructor(private subscribeService: SubscribeFormService) { }
 
   ngOnInit() {
-
+ this.thanksMessage="";
   }
 
   async onSubmit(form) {
@@ -24,8 +25,10 @@ export class SubscribeFormComponentComponent implements OnInit {
     }
     // The server will generate the id for this new subscriber
     this.model = new _Subscriber(form.value['firstname'], form.value['lastname'], form.value['email']);
-    this.heroesService.addSubscriber(this.model)
-      .subscribe();
+    this.subscribeService.addSubscriber(this.model)
+      .subscribe(
+         () => this.thanksMessage = this.subscribeService.messageSub()
+      );
     console.log(this.model);
     this.submitted = true;
   }
