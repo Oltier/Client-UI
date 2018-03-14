@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { FormsModule } from '@angular/forms';
 import { SubscribeFormService } from './subscribe-form.service'
 import { Subscriber } from 'rxjs/Subscriber';
-import { _Subscriber } from './subscriber'
+import { _Subscriber } from './subscriber';
+
 @Component({
   selector: 'app-subscribe-form-component',
   templateUrl: './subscribe-form-component.component.html',
@@ -12,13 +13,12 @@ import { _Subscriber } from './subscriber'
 export class SubscribeFormComponentComponent implements OnInit {
   model = new _Subscriber("", "", "");
   submitted = false;
-  thanksMessage: any;
+  responseMessage: string;
   constructor(private subscribeService: SubscribeFormService) { }
 
   ngOnInit() {
- this.thanksMessage="";
+ this.responseMessage="";
   }
-
   async onSubmit(form) {
     if (!form.valid) {
       return;
@@ -27,12 +27,11 @@ export class SubscribeFormComponentComponent implements OnInit {
     this.model = new _Subscriber(form.value['firstname'], form.value['lastname'], form.value['email']);
     this.subscribeService.addSubscriber(this.model)
       .subscribe(
-         () => this.thanksMessage = this.subscribeService.messageSub()
-      );
-    console.log(this.model);
+        response => this.responseMessage=this.subscribeService.messageSub(),
+        );
     this.submitted = true;
   }
-
+ 
 
 
 }
